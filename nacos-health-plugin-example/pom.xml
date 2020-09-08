@@ -15,11 +15,11 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.alibaba.nacos</groupId>
-            <artifactId>nacos-naming</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.nacos</groupId>-->
+<!--            <artifactId>nacos-naming</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--        </dependency>-->
     </dependencies>
 
 </project>

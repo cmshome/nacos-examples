@@ -28,3 +28,5 @@ hs_err_pid*
 .idea/
 *.iml
 out/
+/nacos-spring-cloud-example/nacos-spring-cloud-config-example/target
+/nacos-spring-boot-example/nacos-spring-boot-config-example/target/
