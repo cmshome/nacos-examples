@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
+/**
+ * 通过 Spring Cloud 原生注解 @RefreshScope 实现配置自动更新：
+ */
 @RestController
 @RequestMapping("/config")
 @RefreshScope
