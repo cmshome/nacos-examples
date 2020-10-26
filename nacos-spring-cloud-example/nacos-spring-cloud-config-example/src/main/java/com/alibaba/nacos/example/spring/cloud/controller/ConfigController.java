@@ -14,22 +14,42 @@ import java.util.Map;
 @RefreshScope
 public class ConfigController {
 
-    @Value("${useLocalCache:false}")
-    private boolean useLocalCache;
-    @Value(value = "${name:lxk-test}")
+    @Value("${nacosServer:false}")
+    private boolean nacosServer;
+
+    @Value(value = "${name:d}")
     private String name;
 
-    @Value(value = "${age:18}")
+    @Value(value = "${from:d}")
+    private String from;
+
+    @Value(value = "${want:d}")
+    private String want;
+
+    @Value(value = "${movie:d}")
+    private String movie;
+
+    @Value(value = "${son:d}")
+    private String son;
+
+    @Value(value = "${age:0}")
     private int age;
 
+
     /**
-     * http://localhost:8080/config/get
+     * 端口默认是8080，看配置里面的端口是否设置
+     * 启动后，web 访问地址  http://localhost:9999/config/get
      */
     @RequestMapping("/get")
     public String get() {
-        Map<String, Object> map = Maps.newHashMap();
-        map.put("useLocalCache", useLocalCache);
+        // 希望结果json有序，方便阅读。
+        Map<String, Object> map = Maps.newTreeMap();
+        map.put("nacosServer", nacosServer);
         map.put("name", name);
+        map.put("from", from);
+        map.put("want", want);
+        map.put("movie", movie);
+        map.put("son", son);
         map.put("age", age);
         return JsonUtils.parseObjToFormatJson(map);
     }
